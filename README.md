@@ -14,11 +14,11 @@
 ### A. Setting up Terraform
   1. First clone the repo to you local machine.
   ```console
-user@machine:~/Desktop/terraform_config/$ gh repo clone SrikarDVS/Covid_twitter_sentiment_analysis
+user@machine:~/Desktop/$ gh repo clone SrikarDVS/Covid_twitter_sentiment_analysis
 ```
   2. Navigate to the terraform_config directory
 ```console
-user@machine:~/Desktop/terraform_config/$ cd Covid_twitter_sentiment_analysis
+user@machine:~/Desktop/$ cd Covid_twitter_sentiment_analysis
 ```
   3. In this directory you will find the files "vpc.tf", "variables.tf" and "terraform.tfvars"
   4. Open the "terraform.tfvars" file and enter the variables required. ( Get the ami details using this https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html )
@@ -32,11 +32,11 @@ user@machine:~/Desktop/terraform_config/$ cd Covid_twitter_sentiment_analysis
 ### C. Running Terraform
   1. Open a terminal in the terraform_config folder and run the command  
 ```console
-user@machine:~/Desktop/terraform_config/$ terraform init 
+user@machine:~/Desktop/Covid_twitter_sentiment_analysis/$ terraform init 
 ```
   2. Then run terraform apply and type "yes" when required.
 ```console
-user@machine:~/Desktop/terraform_config/$ terraform apply
+user@machine:~/Desktop/Covid_twitter_sentiment_analysis/$ terraform apply
 ``` 
   3. This process will take around 2 mins, but the output should be the twitter stream running and showing you individual tweets having the keyword covid19.
   
