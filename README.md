@@ -22,7 +22,7 @@ B. Setting up Twitter API
   2. Open the twitter_analytics.py file and fill in those keys where required along with aws credentials for the data stream.
   
 C. Running terraform
-  1. Open a terminal in the terraform_config folder and run the command "terraform init".
+  1. Open a terminal in the terraform_config folder and run the command '''console user@machine:~/Desktop/terraform_config/ terraform init '''
   2. Then run terraform apply and type "yes" when required.
   3. This process will take around 2 mins, but the output should be the twitter stream running and showing you individual tweets having the keyword covid19.
   
