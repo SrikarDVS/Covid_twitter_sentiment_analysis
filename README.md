@@ -14,14 +14,14 @@ A. Setting up Terraform
   ```console
 user@machine:~/Desktop/terraform_config/$ gh repo clone SrikarDVS/Covid_twitter_sentiment_analysis
 ```
-  3. Navigate to the terraform_config directory
+  2. Navigate to the terraform_config directory
 ```console
 user@machine:~/Desktop/terraform_config/$ cd Covid_twitter_sentiment_analysis
 ```
-  5. In this directory you will find the files "vpc.tf", "variables.tf" and "terraform.tfvars"
-  6. Open the "terraform.tfvars" file and enter the variables required. ( Get the ami details using this https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html )
-  7. Download the private ssh key with the same name as given in the "tfvars" file, place this key in the terraform_config directory
-  8. Change the ssh key permissions using the chmod 400 command ( chmod 400 "Keyname" )
+  3. In this directory you will find the files "vpc.tf", "variables.tf" and "terraform.tfvars"
+  4. Open the "terraform.tfvars" file and enter the variables required. ( Get the ami details using this https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html )
+  5. Download the private ssh key with the same name as given in the "tfvars" file, place this key in the terraform_config directory
+  6. Change the ssh key permissions using the chmod 400 command ( chmod 400 "Keyname" )
   
 B. Setting up Twitter API
   1. Create a twitter standalone app and from the keys section get the consumer and access token keys. ( 4 keys in total, 2 from each )
@@ -33,6 +33,9 @@ C. Running terraform
 user@machine:~/Desktop/terraform_config/$ terraform init 
 ```
   2. Then run terraform apply and type "yes" when required.
+```console
+user@machine:~/Desktop/terraform_config/$ terraform apply
+``` 
   3. This process will take around 2 mins, but the output should be the twitter stream running and showing you individual tweets having the keyword covid19.
   
 D. Databricks
