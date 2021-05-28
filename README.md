@@ -1,5 +1,6 @@
 # Covid_twitter_sentiment_analysis
 
+
 ## Pre-Requisites
 1. AWS account (Free tier)
 2. Databricks ID (Community Edition)
@@ -9,7 +10,8 @@
 
 ## Running the application (Ensure you have the prerequisites installed)
 
-A. Setting up Terraform
+
+### A. Setting up Terraform
   1. First clone the repo to you local machine.
   ```console
 user@machine:~/Desktop/terraform_config/$ gh repo clone SrikarDVS/Covid_twitter_sentiment_analysis
@@ -23,11 +25,11 @@ user@machine:~/Desktop/terraform_config/$ cd Covid_twitter_sentiment_analysis
   5. Download the private ssh key with the same name as given in the "tfvars" file, place this key in the terraform_config directory
   6. Change the ssh key permissions using the chmod 400 command ( chmod 400 "Keyname" )
   
-B. Setting up Twitter API
+### B. Setting up Twitter API
   1. Create a twitter standalone app and from the keys section get the consumer and access token keys. ( 4 keys in total, 2 from each )
   2. Open the twitter_analytics.py file and fill in those keys where required along with aws credentials for the data stream.
   
-C. Running terraform
+### C. Running Terraform
   1. Open a terminal in the terraform_config folder and run the command  
 ```console
 user@machine:~/Desktop/terraform_config/$ terraform init 
@@ -38,6 +40,6 @@ user@machine:~/Desktop/terraform_config/$ terraform apply
 ``` 
   3. This process will take around 2 mins, but the output should be the twitter stream running and showing you individual tweets having the keyword covid19.
   
-D. Databricks
+### D. Databricks
   1. Open databricks and import the python notebook from the repo
   2. Run all the cells to ingest data and wait to accumulate a few samples, then run the cells for processing and cleaning the data and finally the cells to visulaize the data
