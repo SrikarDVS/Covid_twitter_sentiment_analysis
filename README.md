@@ -23,7 +23,7 @@ user@machine:~/Desktop/$ gh repo clone SrikarDVS/Covid_twitter_sentiment_analysi
 user@machine:~/Desktop/$ cd Covid_twitter_sentiment_analysis
 ```
   4. In this directory you will find the files "vpc.tf", "variables.tf","terraform.tfvars","twitter_analytics.py","Tweets.ipynb"
-  5. Open the "terraform.tfvars" file and enter the required variables. [The details of the variables can be found here.](#-Variables-in-the-"tfvars"-file)
+  5. Open the "terraform.tfvars" file and enter the required variables. [The details of the variables can be found here.](# Variables in the "tfvars" file)
   7. Download the private ssh key with the same name as given in the "tfvars" file, place this key in the terraform_config directory
   8. Change the ssh key permissions using the chmod 400 command ( chmod 400 "Keyname" )
   
