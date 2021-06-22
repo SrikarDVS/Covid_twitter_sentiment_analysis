@@ -4,7 +4,7 @@
 
 # Table of Contents
   * [Pre-Requisites](#pre-requisites)
-  * [Running the application (Ensure you have the prerequisites installed)](#running-the-application--ensure-you-have-the-prerequisites-installed-)
+  * Running the application (Ensure you have the prerequisites installed)
     + [A. Setting up AWS account and getting your ssh key](#a-setting-up-aws-account-and-getting-your-ssh-key)
     + [B. Setting up Terraform](#b-setting-up-terraform)
     + [C. Setting up Twitter API](#c-setting-up-twitter-api)
