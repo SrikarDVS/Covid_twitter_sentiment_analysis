@@ -73,30 +73,30 @@ user@machine:~/Desktop/Covid_twitter_sentiment_analysis/$ terraform apply
 
 ### Variables in the tfvars file
 
-1. AWS access key: This is your amazon aws access key for the user profile you are using, instructions on how to get it are given [here.](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
-2. AWS secret key: This is the secret key tied to the user profile, you can learn how to find it [here.](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
-3. VPC region: This is where you specify which region you want your aws vpc to be created, you can find a list of regions [here.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
-4. VPC cider block: This is the block you are allocating to your vpc to make further divisions on, more details on vpc and subnets are [here.](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html)
-5. VPC subnet ip: This is the ip you are giving to the public subnet, from your cider block.
-6. ami name ( you can get this from [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html)
-7. ec2 name: This is the name you give to your ec2 instance.
-8. sshkeyname: This is the name of the ssh key pair you created earlier.
-9. VPC private subnet ip: This is the ip you are giving to your private subnet.
-10. VPC public subnet access ip range: This is used to restrict access to the public ip of the subnet from a given range of ip addresses, you can give 0.0.0.0/0 to permit anyone to access.
+1. **AWS access key**: This is your amazon aws access key for the user profile you are using, instructions on how to get it are given [here.](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
+2. **AWS secret key**: This is the secret key tied to the user profile, you can learn how to find it [here.](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
+3. **VPC region**: This is where you specify which region you want your aws vpc to be created, you can find a list of regions [here.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
+4. **VPC cider block**: This is the block you are allocating to your vpc to make further divisions on, more details on vpc and subnets are [here.](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html)
+5. **VPC subnet ip**: This is the ip you are giving to the public subnet, from your cider block.
+6. **AMI name**: You can get this from [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html)
+7. **ec2 name**: This is the name you give to your ec2 instance.
+8. **sshkeyname**: This is the name of the ssh key pair you created earlier.
+9. **VPC private subnet ip**: This is the ip you are giving to your private subnet.
+10. **VPC public subnet access ip range**: This is used to restrict access to the public ip of the subnet from a given range of ip addresses, you can give 0.0.0.0/0 to permit anyone to access.
 
 
 ### Variables in the twitter-analytics.py file
 
-1. Consumer key: This is the consumer key given by the twitter api and can be found on the console of the app you made.
-2. Consumer secret key: This is the consumer key given by the twitter api and can be found on the console of the app you made.
-3. Access token: This is the consumer key given by the twitter api and can be found on the console of the app you made.
-4. Secret Access token: This is the consumer key given by the twitter api and can be found on the console of the app you made.
-5. region name: This is the region you gave in the variables file earler.
-6. aws secret key id: Same as the one in the variables file.
-7. aws secret access key: Same as the one in the variables file.
+1. **Consumer key**: This is the consumer key given by the twitter api and can be found on the console of the app you made.
+2. **Consumer secret key**: This is the consumer key given by the twitter api and can be found on the console of the app you made.
+3. **Access token**: This is the consumer key given by the twitter api and can be found on the console of the app you made.
+4. **Secret Access token**: This is the consumer key given by the twitter api and can be found on the console of the app you made.
+5. **region name**: This is the region you gave in the variables file earler.
+6. **aws secret key id**: Same as the one in the variables file.
+7. **aws secret access key**: Same as the one in the variables file.
 
 ### Variables in the tweets.ipynb file
 
-1. AWS access key id: Same as in variables file.
-2. AWS secret key id: Same as in variables file.
-3. AWS region: Same as in variables file.
+1. **AWS access key id**: Same as in variables file.
+2. **AWS secret key id**: Same as in variables file.
+3. **AWS region**: Same as in variables file.
