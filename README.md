@@ -2,6 +2,17 @@
 
 # This guide assumes you are on a Linux based OS
 
+# Table of Contents
+  * [Pre-Requisites](#pre-requisites)
+  * [Running the application (Ensure you have the prerequisites installed)](#running-the-application--ensure-you-have-the-prerequisites-installed-)
+    + [A. Setting up AWS account and getting your ssh key](#a-setting-up-aws-account-and-getting-your-ssh-key)
+    + [B. Setting up Terraform](#b-setting-up-terraform)
+    + [C. Setting up Twitter API](#c-setting-up-twitter-api)
+    + [D. Running Terraform](#d-running-terraform)
+    + [E. Databricks](#e-databricks)
+    + [Variables in the tfvars file](#variables-in-the-tfvars-file)
+    + [Variables in the twitter-analytics.py file](#variables-in-the-twitter-analyticspy-file)
+
 ## Pre-Requisites
 1. [AWS account (Free tier)](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 2. [Databricks ID (Community Edition)](https://community.cloud.databricks.com/login.html)
