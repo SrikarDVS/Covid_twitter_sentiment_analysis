@@ -10,8 +10,9 @@
     + [C. Setting up Twitter API](#c-setting-up-twitter-api)
     + [D. Running Terraform](#d-running-terraform)
     + [E. Databricks](#e-databricks)
-    + [Variables in the tfvars file](#variables-in-the-tfvars-file)
-    + [Variables in the twitter-analytics.py file](#variables-in-the-twitter-analyticspy-file)
+  * [Variables in the tfvars file](#variables-in-the-tfvars-file)
+  * [Variables in the twitter-analytics.py file](#variables-in-the-twitter-analyticspy-file)
+  * [Variables in the tweets.ipynb file](#variables-in-the-tweetsipynb-file)
 
 ## Pre-Requisites
 1. [AWS account (Free tier)](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
@@ -48,7 +49,7 @@ user@machine:~/Desktop/$ chmod 400 <keyname>
 ### C. Setting up Twitter API
   1. Follow the steps for getting access to the twitter api given in the prerequisites, this will allow you to create apps and access keys.
   2. Create a twitter standalone app and from the keys section get the consumer and access token keys. ( Each will have a key and a secret key, so there will be 4 keys in total )
-  3. Open the twitter_analytics.py file and fill in those keys where required, along with aws credentials for the data stream.
+  3. Open the twitter_analytics.py file and fill in those keys where required, along with aws credentials for the data stream. Details of the variables are [here]((#variables-in-the-twitter-analyticspy-file)
   
 ### D. Running Terraform
   1. Open a terminal in the terraform_config folder and run the command  
@@ -59,11 +60,15 @@ user@machine:~/Desktop/Covid_twitter_sentiment_analysis/$ terraform init
 ```console
 user@machine:~/Desktop/Covid_twitter_sentiment_analysis/$ terraform apply
 ``` 
-  3. This process will take around 2 mins, but the output should be the twitter stream running and showing you individual tweets having the keyword covid19.
+  3. This process will take a couple of minutes, but the output should be the twitter stream running and showing you individual tweets having the keyword covid19.
   
 ### E. Databricks
-  1. Open databricks and import the python notebook from the repo
-  2. Run all the cells to ingest data and wait to accumulate a few samples, then run the cells for processing and cleaning the data and finally the cells to visulaize the data
+  1. Make a databricks community account in the link given in the [pre-requisites]((#pre-requisites)
+  2. Import the notebook given in the repo into databricks by following the guide [here.](https://docs.databricks.com/notebooks/notebooks-manage.html#import-a-notebook)
+  3. In the notebook the cells are labelled in accordance with what they do, there are 2 labels, ingestion and processing. This label is basically the work "ingesiton" or "processing" commented at the beginning of the cell.
+  4. Initially enter the variables required, details are found [here.](#variables-in-the-tweetsipynb-file)
+  5. Once you have given the details, run all the cells which are marked as ingestion, and then wait for 15 minutes. This will give some time for the program to fetch tweets and store them in the spark dataframe.
+  6. Once you have let the ingestion cells run, you can run the processing cells, these will clean the data, process it and visualize the processed data
 
 
 ### Variables in the tfvars file
@@ -89,3 +94,9 @@ user@machine:~/Desktop/Covid_twitter_sentiment_analysis/$ terraform apply
 5. region name: This is the region you gave in the variables file earler.
 6. aws secret key id: Same as the one in the variables file.
 7. aws secret access key: Same as the one in the variables file.
+
+### Variables in the tweets.ipynb file
+
+1. AWS access key id: Same as in variables file.
+2. AWS secret key id: Same as in variables file.
+3. AWS region: Same as in variables file.
